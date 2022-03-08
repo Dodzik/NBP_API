@@ -1,19 +1,19 @@
 # NBP API
 
 ## General info
-It's a simple project using NBP API to receive data about currency 
+It's a simple project using NBP API to receive data about currency
 exchange rates for the last 5 days and average gold price for the last 14 days.
 
 ## Manual Guide
-To run Internet applications on your own device, compile NbpApplication and then enter in the browser:
+To run Internet applications on your device, compile NbpApplication and then enter in the browser:
 
- - [http://localhost:8080/api/gold-price/average](http://localhost:8080/api/gold-price/average) 
-to display average gold price for the last 14 business days.
+- [http://localhost:8080/api/gold-price/average](http://localhost:8080/api/gold-price/average)
+  to display the average gold price for the last 14 business days.
 
 or
 
- - [http://localhost:8080/api/exchange-rates/{currencyCode}](http://localhost:8080/api/exchange-rates/{currencyCode})
-   (for example USD) to display currency exchange rate PLN to {currencyCode} for the last 5 business days.
+- [http://localhost:8080/api/exchange-rates/{currencyCode}](http://localhost:8080/api/exchange-rates/{currencyCode})
+  (for example USD) to display currency exchange rate PLN to {currencyCode} for the last 5 business days.
 
 
 
