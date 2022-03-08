@@ -14,21 +14,20 @@ import java.util.ArrayList;
 public class ExchangeRatesService implements IExchangeRatesService {
     @Override
     public ArrayList<ExchangeRate> getExchangeRate(String currencyCode) throws UnirestException {
-        String httpQuery2 = "http://api.nbp.pl/api/exchangerates/tables/a/last/5";
+        String httpQuery2 = "https://api.nbp.pl/api/exchangerates/tables/a/last/5";
 
         HttpResponse<JsonNode> response2 = Unirest.get(httpQuery2)
                 .asJson();
         ArrayList<ExchangeRate> result = new ArrayList<>();
         int count = 0;
-        String myCode = currencyCode;
         JSONArray jsonArray = response2.getBody().getArray();
         String date;
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONArray jsonArray2 = jsonArray.getJSONObject(i).getJSONArray("rates");
             date = jsonArray.getJSONObject(i).getString("effectiveDate");
             for (int j = 0; j < jsonArray2.length(); j++) {
-                if (jsonArray2.getJSONObject(j).getString("code").equals(myCode)) {
-                    result.add(new ExchangeRate((long) count, jsonArray2.getJSONObject(j).getString("currency"), myCode, jsonArray2.getJSONObject(j).getDouble("mid") + "", date));
+                if (jsonArray2.getJSONObject(j).getString("code").equals(currencyCode)) {
+                    result.add(new ExchangeRate((long) count, jsonArray2.getJSONObject(j).getString("currency"), currencyCode, jsonArray2.getJSONObject(j).getDouble("mid") + "", date));
                 }
             }
         }
