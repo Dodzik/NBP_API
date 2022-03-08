@@ -3,6 +3,7 @@
 ## General info
 It's a simple project using NBP API to receive data about currency
 exchange rates for the last 5 days and average gold price for the last 14 days.
+Queries return data in JSON.
 
 ## Manual Guide
 To run Internet applications on your device, compile NbpApplication and then enter in the browser:
