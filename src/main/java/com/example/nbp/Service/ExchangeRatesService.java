@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ExchangeRatesService implements IExchangeRatesService {
     @Override
     public ArrayList<ExchangeRate> getExchangeRate(String currencyCode) throws UnirestException {
-        String httpQuery2 = "https://api.nbp.pl/api/exchangerates/tables/a/last/5";
+        String httpQuery2 = "http://api.nbp.pl/api/exchangerates/tables/a/last/5";
 
         HttpResponse<JsonNode> response2 = Unirest.get(httpQuery2)
                 .asJson();

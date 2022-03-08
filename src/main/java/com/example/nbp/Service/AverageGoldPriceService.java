@@ -13,7 +13,7 @@ public class AverageGoldPriceService implements IAverageGoldPriceService {
 
     public AverageGoldPrice getAverageGoldPrice() throws UnirestException {
 
-        String httpQuetry = "https://api.nbp.pl/api/cenyzlota/last/14";
+        String httpQuetry = "http://api.nbp.pl/api/cenyzlota/last/14";
         HttpResponse<JsonNode> response = Unirest.get(httpQuetry)
                 .asJson();
         JSONArray jsonArray = response.getBody().getArray();
