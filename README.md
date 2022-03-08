@@ -15,10 +15,6 @@ or
 - [http://localhost:8080/api/exchange-rates/{currencyCode}](http://localhost:8080/api/exchange-rates/USD)
   (for example USD) to display currency exchange rate PLN to {currencyCode} for the last 5 business days.
 
-
-
-
-
 ### Technologies used
 
 - Java (Spring)
